@@ -1,9 +1,10 @@
 {
-  "name": "front-end",
+  "name": "BillCart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^7.2.0",
+    "@capacitor/barcode-scanner": "^2.0.3",
     "@capacitor/core": "^7.2.0",
     "@capacitor/ios": "^7.2.0",
     "@emotion/react": "^11.14.0",
