@@ -23,6 +23,7 @@ import ReceiptIcon from '@mui/icons-material/Receipt';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import AddchartIcon from '@mui/icons-material/Addchart';
 import ListAltIcon from '@mui/icons-material/ListAlt';
+import { Capacitor } from '@capacitor/core';
 
 const drawerWidth = 240;
 
@@ -32,7 +33,7 @@ const Layout = () => {
 
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md')); // md = 960px+
-
+const isAndroid = Capacitor.getPlatform() === 'android';
   const Sidebar = (
     <Drawer
       variant="permanent"
@@ -88,10 +89,17 @@ const Layout = () => {
         }}
       >
         {/* Top App Bar */}
-        <AppBar position="fixed" color="default" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
-          <Toolbar>
+        <AppBar
+          position="fixed"
+          color="default"
+          sx={{
+            ...(isAndroid && { paddingTop: '25px' }),
+            zIndex: theme.zIndex.drawer + 1,
+          }}
+        >
+        <Toolbar>
             <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-              <Box display="flex" color={'rgb(103, 58, 183)'} alignItems="center" gap={1}>
+              <Box onClick={() => navigateToPage('/')} display="flex" color={'rgb(103, 58, 183)'} alignItems="center" gap={1}>
                 <ReceiptIcon />
                 <Typography variant="h6" fontWeight="bold">
                   Bilkart
@@ -130,6 +138,7 @@ const Layout = () => {
            borderTop: '1px solid #ccc',
            zIndex: 1100,
            backgroundColor: '#fff',
+           ...(isAndroid && { paddingBottom: '25px' }),
          }}
        >
          <BottomNavigationAction onClick={() => navigateToPage('/products')} label="Products" icon={<ListAltIcon />} />
