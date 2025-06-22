@@ -10,7 +10,7 @@ const BarcodeScannerPage = () => {
       const result = await CapacitorBarcodeScanner.scanBarcode({
         hint: 17, // ALL
         scanInstructions: 'Scan barcode',
-        scanButton: true,
+        // scanButton: true,
         scanText: 'Tap to scan',
         cameraDirection: 1, // BACK
         scanOrientation: 1, // PORTRAIT

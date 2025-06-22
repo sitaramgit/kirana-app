@@ -14,7 +14,8 @@ import { Capacitor } from '@capacitor/core';
 
 // Main App
 const App: React.FC = () => {
-  const isAndroid = Capacitor.getPlatform() === 'android';
+const isAndroid = /android/i.test(navigator.userAgent);
+console.log(navigator.userAgent)
   return (
     <ThemeProvider theme={theme}>
       <Routes>
