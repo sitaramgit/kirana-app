@@ -10,23 +10,26 @@ import ProductDetails from './pages/ProductDetails';
 import AddProduct from './pages/AddProduct';
 import BarcodeScannerPage from './pages/BarcodeScannerPage';
 import { Capacitor } from '@capacitor/core';
+import Temperature from './pages/Temperature';
 
 
 // Main App
 const App: React.FC = () => {
-const isAndroid = /android/i.test(navigator.userAgent);
-console.log(navigator.userAgent)
+  const isAndroid = /android/i.test(navigator.userAgent);
+  console.log(navigator.userAgent)
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<ProductList />} />
-<Route path="/products/:id" element={<ProductDetails />} />
-<Route path="/add-product" element={<AddProduct />} />
-{isAndroid && <Route path="/scan" element={<BarcodeScannerPage />} />}
-      </Route>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/add-product" element={<AddProduct />} />
+          {isAndroid && <Route path="/scan" element={<BarcodeScannerPage />} />}
+          <Route path="/iot" element={<Temperature />} />
+          
+        </Route>
       </Routes>
     </ThemeProvider>
   );

@@ -102,7 +102,7 @@ const isAndroid = Capacitor.getPlatform() === 'android';
               <Box onClick={() => navigateToPage('/')} display="flex" color={'rgb(103, 58, 183)'} alignItems="center" gap={1}>
                 <ReceiptIcon />
                 <Typography variant="h6" fontWeight="bold">
-                  Bilkart
+                  IOT control app
                 </Typography>
               </Box>
               <NotificationsIcon sx={{color: 'rgb(33 150 243)'}} />
@@ -143,7 +143,7 @@ const isAndroid = Capacitor.getPlatform() === 'android';
        >
          <BottomNavigationAction onClick={() => navigateToPage('/products')} label="Products" icon={<ListAltIcon />} />
          <BottomNavigationAction onClick={() => navigateToPage('/add-product')} label="Add" icon={<AddchartIcon />} />
-         <BottomNavigationAction onClick={() => navigateToPage('/scan')}  label="Scan" icon={<QrCodeScannerIcon />} />
+         <BottomNavigationAction onClick={() => navigateToPage('/iot')}  label="Scan" icon={<QrCodeScannerIcon />} />
        </BottomNavigation>
         )}
       </Box>
