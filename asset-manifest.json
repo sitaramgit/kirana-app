@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kirana-app/static/css/main.92edaf80.css",
-    "main.js": "/kirana-app/static/js/main.d2872bb5.js",
+    "main.js": "/kirana-app/static/js/main.43d870fa.js",
     "static/js/703.68494431.chunk.js": "/kirana-app/static/js/703.68494431.chunk.js",
     "static/media/roboto-latin-400-normal.woff2": "/kirana-app/static/media/roboto-latin-400-normal.df1be0be92f6f19b8115.woff2",
     "static/media/roboto-latin-400-normal.woff": "/kirana-app/static/media/roboto-latin-400-normal.50a0a61e29c19a2f05cb.woff",
@@ -23,11 +23,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/kirana-app/static/media/roboto-greek-ext-400-normal.a0baf7d6726d8f751a27.woff",
     "index.html": "/kirana-app/index.html",
     "main.92edaf80.css.map": "/kirana-app/static/css/main.92edaf80.css.map",
-    "main.d2872bb5.js.map": "/kirana-app/static/js/main.d2872bb5.js.map",
+    "main.43d870fa.js.map": "/kirana-app/static/js/main.43d870fa.js.map",
     "703.68494431.chunk.js.map": "/kirana-app/static/js/703.68494431.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92edaf80.css",
-    "static/js/main.d2872bb5.js"
+    "static/js/main.43d870fa.js"
   ]
 }
